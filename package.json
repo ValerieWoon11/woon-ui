@@ -1,0 +1,37 @@
+{
+  "name": "woon-ui",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./woon-ui/woon-ui.cjs.js",
+  "module": "./woon-ui/woon-ui.es.js",
+  "types": "./woon-ui/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./woon-ui/woon-ui.es.js",
+      "require": "./woon-ui/woon-ui.cjs.js",
+      "types": "./woon-ui/index.d.ts"
+    },
+    "./dist/style.css": "./woon-ui/woon-ui.css"
+  },
+  "files": [ "woon-ui" ],
+  "scripts": {
+    "dev": "vite examples",
+    "build": "vite build --config vite.config.lib.ts --declaration --emitDeclarationOnly --outDir woon-ui",
+    "build test": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.25",
+    "ant-design-vue": "4.2.6",
+    "dayjs": "^1.11.19"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vue-tsc": "^3.1.5"
+  }
+}
