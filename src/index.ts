@@ -11,4 +11,4 @@ const install = (app: App) => {
 
 export default { install };
 export * from './components';
-export * as hooks from './hooks';
+// export * as hooks from './hooks';

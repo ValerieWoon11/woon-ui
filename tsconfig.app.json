@@ -14,12 +14,12 @@
 
     "baseUrl": ".",
     "paths": {
-      "/@/*": ["src/*"]
+      "/@/*": ["src/*"],
     },
     "declaration": true,
-    "declarationDir": "./woon-ui",
-    "outDir": "./woon-ui"
+    "declarationDir": "./dist",
+    "outDir": "./dist"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["test", "node_modules", "woon-ui"]
+  "exclude": ["test", "node_modules", "dist"]
 }

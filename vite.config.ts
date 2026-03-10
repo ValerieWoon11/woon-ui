@@ -11,18 +11,18 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: [{
-      find: /\/@\//, // /@/xxxx => src/xxxx
+      find: /\/#\//, // /@/xxxx => src/xxxx
       replacement: pathResolve('src') + '/',
     }]
   },
   build: {
     lib: {
       entry: {
-        index: pathResolve('src/components/index.ts'),
-        hooks: pathResolve('src/hooks/index.ts'),
+        'index': pathResolve('src/index.ts'),
+        'hooks': pathResolve('src/hooks/index.ts'),
       },
       name: 'WoonUI',
-      fileName: (format) => `woon-ui.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
       formats: ['es', 'cjs']
     },
     rollupOptions: {
@@ -32,12 +32,12 @@ export default defineConfig({
           'vue': 'vue',
           'ant-design-vue': 'antd'
         },
-        assetFileNames: (assetInfo) => {
+        exports: 'named',
+        /*assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') return 'woon-ui.css';
           return assetInfo.name || '';
-        },
+        },*/
       }
     },
-    outDir: 'woon-ui'
   }
 });

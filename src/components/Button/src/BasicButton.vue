@@ -16,7 +16,7 @@
 import type { PropType } from 'vue';
 import { unref, computed } from 'vue';
 import { Button as AButton } from 'ant-design-vue';
-import { useAttrs } from '/@/hooks/core/useAttrs';
+import { useAttrs } from '/#/hooks/core/useAttrs';
 
 type buttonColor = 'primary' | 'success' | 'warning' | 'error' | 'info' | '';
 

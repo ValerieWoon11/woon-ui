@@ -2,26 +2,24 @@
   "name": "woon-ui",
   "version": "0.0.1",
   "type": "module",
-  "main": "./woon-ui/woon-ui.cjs.js",
-  "module": "./woon-ui/woon-ui.es.js",
-  "types": "./woon-ui/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./woon-ui/index.d.ts",
-      "import": "./woon-ui/woon-ui.es.js",
-      "require": "./woon-ui/woon-ui.cjs.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     },
     "./hooks": {
-      "types": "./woon-ui/hooks/index.d.ts",
-      "import": "./woon-ui/hooks.es.js",
-      "require": "./woon-ui/hooks.cjs.js"
+      "import": "./dist/hooks.es.js",
+      "require": "./dist/hooks.cjs.js"
     },
-    "./dist/style.css": "./woon-ui/woon-ui.css"
+    "./dist/index.css": "./dist/index.css"
   },
-  "files": [ "woon-ui" ],
+  "files": [ "dist" ],
   "scripts": {
-    "dev": "vite test --config ./test/vite.config.test.ts",
-    "build": "vite build --declaration --emitDeclarationOnly --outDir woon-ui",
+    "build": "vite build",
     "build test": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },

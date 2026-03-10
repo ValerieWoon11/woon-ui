@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>主要</div>
 </template>
 
 <script setup lang="ts">
