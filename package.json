@@ -7,16 +7,21 @@
   "types": "./woon-ui/index.d.ts",
   "exports": {
     ".": {
+      "types": "./woon-ui/index.d.ts",
       "import": "./woon-ui/woon-ui.es.js",
-      "require": "./woon-ui/woon-ui.cjs.js",
-      "types": "./woon-ui/index.d.ts"
+      "require": "./woon-ui/woon-ui.cjs.js"
+    },
+    "./hooks": {
+      "types": "./woon-ui/hooks/index.d.ts",
+      "import": "./woon-ui/hooks.es.js",
+      "require": "./woon-ui/hooks.cjs.js"
     },
     "./dist/style.css": "./woon-ui/woon-ui.css"
   },
   "files": [ "woon-ui" ],
   "scripts": {
-    "dev": "vite examples",
-    "build": "vite build --config vite.config.lib.ts --declaration --emitDeclarationOnly --outDir woon-ui",
+    "dev": "vite test --config ./test/vite.config.test.ts",
+    "build": "vite build --declaration --emitDeclarationOnly --outDir woon-ui",
     "build test": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
